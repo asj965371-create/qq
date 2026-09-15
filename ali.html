@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALI | شركة احترافية</title>
+    <meta
+      name="description"
+      content="صفحة شركة احترافية حديثة ومميزة لخدمات الأعمال والتسويق والاستشارات."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Tajawal:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #090d12;
+        --bg-soft: #131b24;
+        --surface: #171f2b;
+        --surface-strong: #1d2835;
+        --panel: rgba(18, 22, 28, 0.92);
+        --text: #f7f3ee;
+        --muted: #b8b0a5;
+        --gold: #d4b26a;
+        --gold-soft: #f2d79c;
+        --gold-deep: #a77f3e;
+        --line: rgba(212, 178, 106, 0.22);
+        --shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
+      }
+
+      * { box-sizing: border-box; }
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+      body {
+        margin: 0;
+        font-family: "Tajawal", sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(212, 178, 106, 0.14), transparent 20%),
+          linear-gradient(135deg, #070b10 0%, #101720 42%, #090d12 100%);
+        color: var(--text);
+        line-height: 1.8;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+        text-rendering: optimizeLegibility;
+      }
+
+      ::selection {
+        background: rgba(212, 178, 106, 0.28);
+      }
+
+      img { max-width: 100%; display: block; }
+      a { color: inherit; text-decoration: none; }
+      button, input, textarea { font: inherit; }
+
+      .container {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .section { padding: 100px 0; }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(212, 178, 106, 0.08);
+        border: 1px solid var(--line);
+        color: var(--gold-soft);
+        font-size: 0.88rem;
+        margin-bottom: 22px;
+      }
+
+      .section-title {
+        margin: 0 0 18px;
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        line-height: 1.2;
+        color: var(--text);
+      }
+
+      .section-subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.07rem;
+      }
+
+      .gold { color: var(--gold-soft); }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 30px;
+        border-radius: 999px;
+        font-weight: 700;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 28px rgba(212, 178, 106, 0.14);
+        border-color: rgba(212, 178, 106, 0.3);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+        border: none;
+        color: #17110c;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+        background: rgba(9, 13, 18, 0.72);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 86px;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        font-size: 1.5rem;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--gold-soft), var(--gold-deep));
+        color: #17110c;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.7rem;
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .nav-links a {
+        position: relative;
+        transition: color 0.25s ease;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -9px;
+        width: 0;
+        height: 2px;
+        background: var(--gold-soft);
+        transition: width 0.25s ease;
+      }
+
+      .nav-links a:hover { color: var(--text); }
+      .nav-links a:hover::after { width: 100%; }
+
+      .hero {
+        position: relative;
+        padding: 90px 0 70px;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 85% 20%, rgba(212, 178, 106, 0.12), transparent 18%);
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 42px;
+        align-items: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.9rem, 6vw, 5.5rem);
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+      }
+
+      .hero p {
+        margin: 24px 0 0;
+        max-width: 580px;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 30px;
+      }
+
+      .metrics {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        margin-top: 36px;
+      }
+
+      .metric { min-width: 120px; }
+      .metric strong {
+        display: block;
+        color: var(--gold-soft);
+        font-size: 2rem;
+      }
+      .metric span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 560px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .visual-frame {
+        position: relative;
+        width: min(100%, 520px);
+        aspect-ratio: 0.9;
+        border-radius: 30px;
+        padding: 18px;
+        background: linear-gradient(135deg, rgba(212, 178, 106, 0.32), rgba(255,255,255,0.04));
+        box-shadow: var(--shadow);
+      }
+
+      .visual-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 26px;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(7, 10, 14, 0.26), rgba(7, 10, 14, 0.72)),
+          url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      }
+
+      .floating-box, .visual-badge {
+        position: absolute;
+        background: rgba(12, 15, 18, 0.82);
+        border: 1px solid var(--line);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .floating-box {
+        top: 26px;
+        right: -18px;
+        padding: 18px 22px;
+        min-width: 190px;
+      }
+
+      .floating-box small, .visual-badge span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .floating-box strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 1.8rem;
+        color: var(--text);
+      }
+
+      .visual-badge {
+        left: 22px;
+        bottom: 22px;
+        padding: 18px 20px;
+        min-width: 180px;
+      }
+
+      .visual-badge strong {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--gold-soft);
+      }
+
+      .about-grid, .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .about-photo {
+        min-height: 520px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        background:
+          linear-gradient(180deg, rgba(13, 17, 20, 0.2), rgba(13, 17, 20, 0.7)),
+          url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        position: relative;
+      }
+
+      .about-photo::after {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border: 1px solid rgba(212, 178, 106, 0.24);
+        border-radius: 22px;
+      }
+
+      .about-content p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .about-list {
+        list-style: none;
+        padding: 0;
+        margin: 28px 0 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        gap: 18px;
+      }
+
+      .about-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .check {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: rgba(212, 178, 106, 0.12);
+        border: 1px solid rgba(212, 178, 106, 0.32);
+        color: var(--gold-soft);
+        font-weight: 800;
+      }
+
+      .services {
+        border-top: 1px solid rgba(255,255,255,0.04);
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+        background: rgba(255, 255, 255, 0.01);
+      }
+
+      .services-grid, .testimonial-grid, .process-grid, .features-grid {
+        display: grid;
+        gap: 28px;
+        margin-top: 42px;
+      }
+
+      .services-grid { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+      .service-card {
+        background: linear-gradient(180deg, rgba(22, 26, 31, 0.96), rgba(15, 18, 23, 0.92));
+        border-radius: 26px;
+        border: 1px solid rgba(212, 178, 106, 0.1);
+        padding: 28px 24px;
+        transition: transform 0.25s ease, border-color 0.25s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(212, 178, 106, 0.32);
+      }
+
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: rgba(212, 178, 106, 0.08);
+        color: var(--gold-soft);
+        font-size: 1.9rem;
+      }
+
+      .service-card h3 {
+        margin: 22px 0 10px;
+        font-size: 1.5rem;
+      }
+
+      .service-card p { margin: 0; color: var(--muted); }
+
+      .features-grid { grid-template-columns: repeat(4, minmax(180px, 1fr)); }
+      .feature-box {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 22px;
+        border: 1px solid rgba(255,255,255,0.05);
+        text-align: center;
+        padding: 26px 18px;
+      }
+
+      .feature-box strong {
+        display: block;
+        color: var(--gold-soft);
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+      }
+
+      .feature-box span { color: var(--muted); }
+
+      .process-grid { grid-template-columns: repeat(4, minmax(180px, 1fr)); }
+      .process-step {
+        position: relative;
+        padding: 28px 20px 24px;
+        background: linear-gradient(180deg, rgba(19, 23, 28, 0.94), rgba(13, 16, 20, 0.94));
+        border: 1px solid rgba(212, 178, 106, 0.12);
+        border-radius: 22px;
+      }
+
+      .process-step .num {
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        font-size: 2.5rem;
+        font-family: "Cormorant Garamond", serif;
+        color: rgba(212, 178, 106, 0.5);
+      }
+
+      .process-step h3 {
+        margin: 52px 0 10px;
+        font-size: 1.35rem;
+      }
+
+      .process-step p { margin: 0; color: var(--muted); }
+
+      .testimonials { background: rgba(255,255,255,0.01); }
+      .testimonial-grid { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+      .quote-card {
+        background: linear-gradient(180deg, rgba(18, 21, 25, 0.96), rgba(11, 14, 18, 0.94));
+        border-radius: 22px;
+        border: 1px solid rgba(212, 178, 106, 0.12);
+        padding: 28px 22px;
+      }
+
+      .stars {
+        letter-spacing: 0.16em;
+        color: var(--gold-soft);
+      }
+
+      .quote-card p {
+        color: var(--muted);
+        margin: 18px 0 22px;
+      }
+
+      .person {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+        color: #18120e;
+        font-weight: 800;
+      }
+
+      .person small { display: block; color: var(--muted); }
+
+      .contact-panel {
+        background: linear-gradient(180deg, rgba(17, 22, 28, 0.96), rgba(12, 15, 19, 0.94));
+        border: 1px solid rgba(212, 178, 106, 0.12);
+        border-radius: 26px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .info-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+        color: var(--muted);
+      }
+
+      .info-icon {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(212, 178, 106, 0.08);
+        color: var(--gold-soft);
+      }
+
+      form { display: grid; gap: 18px; }
+      .field-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 16px 18px;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid rgba(255,255,255,0.08);
+        color: var(--text);
+        outline: none;
+      }
+
+      input:focus, textarea:focus {
+        border-color: rgba(212, 178, 106, 0.35);
+        box-shadow: 0 0 0 3px rgba(212, 178, 106, 0.1);
+      }
+
+      textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .wa-float {
+        position: fixed;
+        left: 22px;
+        bottom: 22px;
+        z-index: 120;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #20c15a, #18a64b);
+        color: white;
+        font-weight: 800;
+        box-shadow: 0 16px 32px rgba(32, 193, 90, 0.3);
+      }
+
+      footer {
+        padding: 26px 0 52px;
+        border-top: 1px solid rgba(255,255,255,0.06);
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 980px) {
+        .hero-inner,
+        .about-grid,
+        .contact-grid,
+        .services-grid,
+        .process-grid,
+        .testimonial-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .features-grid { grid-template-columns: repeat(2, minmax(170px,1fr)); }
+
+        .nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 18px 0;
+        }
+
+        .nav-links {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .section { padding: 80px 0; }
+        .hero { padding-top: 60px; }
+        .field-row, .about-list, .features-grid { grid-template-columns: 1fr; }
+        .hero-actions { flex-direction: column; align-items: stretch; }
+        .btn { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand" aria-label="علامة الشركة">
+          <span class="brand-mark">A</span>
+          <span>ALI</span>
+        </div>
+        <nav class="nav-links" aria-label="التنقل في الموقع">
+          <a href="#الرئيسية">الرئيسية</a>
+          <a href="#من-نحن">من نحن</a>
+          <a href="#الخدمات">الخدمات</a>
+          <a href="#لماذا-نحن">لماذا نحن</a>
+          <a href="#تواصل">تواصل</a>
+        </nav>
+        <a class="btn btn-primary" href="#تواصل">احجز استشارة</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="الرئيسية">
+        <div class="container hero-inner">
+          <div>
+            <div class="eyebrow">• جودة لا تشوبها الشكوك</div>
+            <h1>نصنع<br />تجارب<br /><span class="gold">احترافية</span> فاخرة</h1>
+            <p>
+              نحن شركة متخصصة في تقديم خدمات متميزة تجمع بين الخبرة، الدقة، والثقة في التنفيذ
+              لتساعد عملك على النمو بثقة واحترافية عالية في كل خطوة.
+            </p>
+            <div class="hero-actions">
+              <a href="#تواصل" class="btn btn-primary">ابدأ مشروعك الآن</a>
+              <a href="#من-نحن" class="btn">تعرف علينا</a>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                <strong>+12</strong>
+                <span>سنوات خبرة</span>
+              </div>
+              <div class="metric">
+                <strong>+450</strong>
+                <span>مشروع منجز</span>
+              </div>
+              <div class="metric">
+                <strong>96%</strong>
+                <span>رضا العملاء</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="تصميم الشركة">
+            <div class="visual-frame">
+              <div class="visual-card">
+                <div class="floating-box">
+                  <small>التقييم العام</small>
+                  <strong>5.0/5.0</strong>
+                </div>
+                <div class="visual-badge">
+                  <strong>+250</strong>
+                  <span>علاقة تجارية متينة</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="من-نحن">
+        <div class="container about-grid">
+          <div class="about-photo" aria-label="فريق الشركة"></div>
+          <div class="about-content">
+            <div class="eyebrow">من نحن</div>
+            <h2 class="section-title">شراكة استراتيجية<br /><span class="gold">بأسلوب احترافي</span></h2>
+            <p>
+              نعمل على بناء علاقات قوية مع عملائنا عبر فهم احتياجاتهم بدقة وتقديم حلول عملية
+              تجمع بين الخبرة، الجودة، والابتكار في التنفيذ.
+            </p>
+            <p>
+              يعتمد منهجنا على التخطيط الدقيق، الالتزام بالمواعيد، والاهتمام بالتفاصيل لتحويل
+              أفكارك إلى واقع ملموس يبرز قيمتك في السوق.
+            </p>
+            <ul class="about-list">
+              <li><span class="check">✓</span> فريق متخصص</li>
+              <li><span class="check">✓</span> خدمة موثوقة</li>
+              <li><span class="check">✓</span> حلول مخصصة</li>
+              <li><span class="check">✓</span> تنفيذ متكامل</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="الخدمات">
+        <div class="container">
+          <div class="section-header">
+            <div class="eyebrow">خدماتنا</div>
+            <h2 class="section-title">حلول متكاملة<br /><span class="gold">لتطوير أعمالك</span></h2>
+            <p class="section-subtitle">نقدم خدمات عصرية ومهنية تساعدك في بناء حضور قوي وصورة احترافية مستدامة.</p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">✦</div>
+              <h3>الاستشارات الإدارية</h3>
+              <p>خطط استراتيجية لتحسين الأداء، تنظيم العمليات، وتطوير أولويات العمل بما يحقق أهدافك بفعالية.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">◈</div>
+              <h3>التسويق والعلامة</h3>
+              <p>بناء هوية قوية وتخطيط حملات تسويقية تدعم نمو علامتك وتزيد من حضورك في السوق.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">▣</div>
+              <h3>إدارة المشاريع</h3>
+              <p>تنفيذ منظم ومتابعة دقيقة لضمان إنجاز المشاريع بكفاءة عالية ضمن الوقت المحدد.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="لماذا-نحن">
+        <div class="container">
+          <div class="eyebrow">لماذا نحن</div>
+          <h2 class="section-title">نتفوق في الجودة<br /><span class="gold">والالتزام</span></h2>
+
+          <div class="features-grid">
+            <div class="feature-box">
+              <strong>12+</strong>
+              <span>سنوات خبرة</span>
+            </div>
+            <div class="feature-box">
+              <strong>450+</strong>
+              <span>عميل راضٍ</span>
+            </div>
+            <div class="feature-box">
+              <strong>24/7</strong>
+              <span>دعم مستمر</span>
+            </div>
+            <div class="feature-box">
+              <strong>100%</strong>
+              <span>التزام بالجودة</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="eyebrow">خطتنا</div>
+          <h2 class="section-title">كيف نعمل؟</h2>
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="num">01</div>
+              <h3>الفهم</h3>
+              <p>نستمع إلى أهدافك واحتياجاتك بدقة حتى نحدد الطريق المثالي.</p>
+            </div>
+            <div class="process-step">
+              <div class="num">02</div>
+              <h3>التخطيط</h3>
+              <p>نضع خطة واضحة أولويات التنفيذ ومعايير قياس النجاح.</p>
+            </div>
+            <div class="process-step">
+              <div class="num">03</div>
+              <h3>التنفيذ</h3>
+              <p>ننفذ بكل خبرة واهتمام بالتفاصيل لتحقيق أفضل النتائج.</p>
+            </div>
+            <div class="process-step">
+              <div class="num">04</div>
+              <h3>الدعم</h3>
+              <p>نواصل المتابعة لضمان استمرارية الأداء ورفع جودة النتائج.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="container">
+          <div class="eyebrow">آراء العملاء</div>
+          <h2 class="section-title">ما يقوله عملاؤنا</h2>
+          <div class="testimonial-grid">
+            <article class="quote-card">
+              <div class="stars">★★★★★</div>
+              <p>“خدمة احترافية واهتمام كبير بالتفاصيل، وقد تجاوزت توقعاتنا في كل مرحلة من المشروع.”</p>
+              <div class="person">
+                <div class="avatar">م</div>
+                <div>
+                  <strong>محمد علي</strong>
+                  <small>رئيس شركة</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="quote-card">
+              <div class="stars">★★★★★</div>
+              <p>“جودة التنفيذ عالية مع فريق متعاون واستجابة سريعة جدًا في كل طلباتنا.”</p>
+              <div class="person">
+                <div class="avatar">س</div>
+                <div>
+                  <strong>سارة أحمد</strong>
+                  <small>مديرة مشروع</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="quote-card">
+              <div class="stars">★★★★★</div>
+              <p>“التعامل كان ممتازًا من البداية وحتى النهاية، والنتائج كانت دقيقة ومفيدة جدًا.”</p>
+              <div class="person">
+                <div class="avatar">ر</div>
+                <div>
+                  <strong>رامي حسن</strong>
+                  <small>مستثمر</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="تواصل">
+        <div class="container contact-grid">
+          <div>
+            <div class="eyebrow">تواصل معنا</div>
+            <h2 class="section-title">ابدأ اليوم<br /><span class="gold">مع شريك موثوق</span></h2>
+            <p class="section-subtitle">نحن مستعدون للاستماع إلى احتياجاتك ومساعدتك في بناء مستقبل أفضل لعملك.</p>
+
+            <div class="contact-panel" style="margin-top: 28px;">
+              <div class="info-row">
+                <div class="info-icon">☎</div>
+                <div>
+                  <strong>الهاتف</strong><br />
+                  779881132
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon">✉</div>
+                <div>
+                  <strong>البريد الإلكتروني</strong><br />
+                  info@ali-company.com
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon">⌂</div>
+                <div>
+                  <strong>العنوان</strong><br />
+                  الرياض - المملكة العربية السعودية
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-panel">
+            <form id="contactForm">
+              <div class="field-row">
+                <input id="name" type="text" placeholder="الاسم" aria-label="الاسم" required />
+                <input id="phone" type="tel" placeholder="رقم الهاتف" aria-label="رقم الهاتف" required />
+              </div>
+              <div class="field-row">
+                <input type="text" placeholder="نوع الطلب" aria-label="نوع الطلب" />
+                <input type="text" placeholder="المدينة" aria-label="المدينة" />
+              </div>
+              <textarea id="message" placeholder="ملاحظات إضافية" aria-label="ملاحظات إضافية"></textarea>
+              <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
+        <div class="container">
+          <div class="eyebrow">دروس تعليمية</div>
+          <h2 class="section-title">دروس قصيرة مفيدة<br /><span class="gold">لتطوير مهاراتك</span></h2>
+          <p class="section-subtitle">ثلاث خطوات عملية لتطوير مهاراتك المهنية بسرعة.</p>
+          <div style="margin-top:18px; color:var(--muted);">
+            <ul>
+              <li>• إدارة المشاريع: ابدأ بتحديد نطاق واضح، وخرّط أولويات التنفيذ.</li>
+              <li>• التسويق الرقمي: تعلم أساسيات تحسين محركات البحث وإدارة الحملات الإعلانية.</li>
+              <li>• تجربة العميل: صمم رحلة مستخدم بسيطة وواضحة لزيادة التحويلات.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+      
+      \  <div class="brand">
+          <span class="brand-mark">A</span>
+          <span>ALI</span>
+        </div>
+        <div>© <span id="year"></span> جميع الحقوق محفوظة</div>
+      </div>
+    </footer>
+
+    <a
+      class="wa-float"
+      href="https://wa.me/966779881132?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="تواصل عبر واتساب"
+      title="واتساب"
+    >WhatsApp</a>
+
+    <script>
+      document.getElementById('contactForm')?.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name')?.value.trim() || 'غير محدد';
+        const phone = document.getElementById('phone')?.value.trim() || 'غير محدد';
+        const message = document.getElementById('message')?.value.trim() || 'لا توجد ملاحظات';
+
+        const waText = encodeURIComponent(
+          'السلام عليكم، أود حجز استشارة\n' +
+          'الاسم: ' + name + '\n' +
+          'رقم الهاتف: ' + phone + '\n' +
+          'ملاحظات: ' + message
+        );
+
+        window.open('https://wa.me/966779881132?text=' + waText, '_blank');
+        this.reset();
+      });
+
+      const yearNode = document.getElementById('year');
+      if (yearNode) {
+        yearNode.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
+
